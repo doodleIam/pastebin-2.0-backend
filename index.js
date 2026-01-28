@@ -11,7 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(
-  cors()
+  cors({
+    origin: ["http://localhost:5173", "https://pastebin-2-0.vercel.app/"]
+  })
 );
 
 app.use(express.json());
